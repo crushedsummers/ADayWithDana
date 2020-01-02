@@ -1,0 +1,40 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 43, in script
+    menu:
+IOError: Couldn't find file 'ThisisHome'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 43, in script
+    menu:
+  File "/Users/ps/Library/Mobile Documents/com~apple~CloudDocs/RENPY/renpy-6.99.14.1-sdk/renpy/ast.py", line 1504, in execute
+    choice = renpy.exports.menu(choices, self.set)
+  File "/Users/ps/Library/Mobile Documents/com~apple~CloudDocs/RENPY/renpy-6.99.14.1-sdk/renpy/exports.py", line 871, in menu
+    rv = renpy.store.menu(items)
+  File "/Users/ps/Library/Mobile Documents/com~apple~CloudDocs/RENPY/renpy-6.99.14.1-sdk/renpy/exports.py", line 1057, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "/Users/ps/Library/Mobile Documents/com~apple~CloudDocs/RENPY/renpy-6.99.14.1-sdk/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/ps/Library/Mobile Documents/com~apple~CloudDocs/RENPY/renpy-6.99.14.1-sdk/renpy/display/core.py", line 2624, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/Users/ps/Library/Mobile Documents/com~apple~CloudDocs/RENPY/renpy-6.99.14.1-sdk/renpy/display/core.py", line 3284, in interact_core
+    renpy.audio.audio.periodic()
+  File "/Users/ps/Library/Mobile Documents/com~apple~CloudDocs/RENPY/renpy-6.99.14.1-sdk/renpy/audio/audio.py", line 976, in periodic_thread_main
+    periodic_pass()
+  File "/Users/ps/Library/Mobile Documents/com~apple~CloudDocs/RENPY/renpy-6.99.14.1-sdk/renpy/audio/audio.py", line 920, in periodic_pass
+    c.periodic()
+  File "/Users/ps/Library/Mobile Documents/com~apple~CloudDocs/RENPY/renpy-6.99.14.1-sdk/renpy/audio/audio.py", line 409, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "/Users/ps/Library/Mobile Documents/com~apple~CloudDocs/RENPY/renpy-6.99.14.1-sdk/renpy/audio/audio.py", line 69, in load
+    rv = renpy.loader.load(fn)
+  File "/Users/ps/Library/Mobile Documents/com~apple~CloudDocs/RENPY/renpy-6.99.14.1-sdk/renpy/loader.py", line 555, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'ThisisHome'.
+
+Darwin-16.7.0-x86_64-i386-64bit
+Ren'Py 6.99.14.1.3218
+A Day With Dana 1.0
+Sat Apr 21 21:14:39 2018
